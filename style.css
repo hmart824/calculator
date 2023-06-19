@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.calculator{
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0,0,0,.16);
+    display: grid;
+    grid-template-columns: repeat(4 , 68px);
+    position: relative;
+    bottom: 100%;
+    animation: top-bottom 1.5s linear 1 forwards;
+}
+@keyframes top-bottom {
+    from{
+        bottom: 100%;
+    }
+    to{
+        bottom: 0%;
+    }
+}
+.calculator h2{
+    grid-column: span 4;
+    padding: 12px 52px;
+}
+#output{
+    grid-column: span 4;
+    height: 81px;
+    font-size: 25px;
+}
+input{
+    background-color: #f1f1f1;
+    border: none;
+    box-shadow: inset -5px -5px 12px #ffffff, inset 5px 5px 12px rgb(0 0 0 / 16%);
+    padding: 0 15px;
+    border-radius: 46px;
+}
+input::placeholder{
+    color: black;
+}
+.btn{
+    height: 48px;
+    width: 48px;
+    margin: 11px;
+    background-color: #f1f1f1;
+    font-size: 20px;
+    border: none;
+    box-shadow: -5px -5px 12px #ffffff, 5px 5px 12px rgba(0,0,0,.16);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.calculator button:nth-child(19){
+    grid-column: span 2;
+    background-color: #f1f1f1;
+    width: 117px;
+    border-radius: 30px;
+}
